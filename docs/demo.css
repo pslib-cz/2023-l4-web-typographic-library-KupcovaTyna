@@ -1,0 +1,32 @@
+.h1replacement {
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.h1replacement {
+    font-size: 3em;
+    padding: 8px;
+    margin: 8px;
+}
+
+.menu__item:hover {
+    background-color: var(--secondary-color);
+    
+    }
+    
+    .menu__item:hover > a {
+      color: var(--third-color);
+    }
+    
+    
+    .menu__item::after {
+      content: "";
+      height: 2px;
+      width: 80%;
+      background-color: var(--third-color);
+      position: absolute;
+      bottom: .6em;
+      left: 10%;
+    }
+

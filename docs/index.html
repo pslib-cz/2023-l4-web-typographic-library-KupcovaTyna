@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./demo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,28 +12,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>logo</div>
-             <menu>
-                <li><a href="">Headings</a></li>
-                <li><a href="">Headings</a></li>
-                <li><a href="">Headings</a></li>
+        <nav class="nav">
+            <div class="nav__logo">NiceLibrary</div>
+             <menu class="nav__menu menu">
+                <li class="menu__item"><a href="#heading">Headings</a></li>
+                <li class="menu__item"><a href="#list">Lists</a></li>
+                <li class="menu__item"><a href="#table">Table</a></li>
+                <li class="menu__item"><a href="#button">Button</a></li>
+                <li class="menu__item"><a href="#img">Image</a></li>
              </menu>
         </nav>
         <h1>Typographic library</h1>
     </header>
     <main>
-        <section>
+        <section id="heading">
             <h2>Headings</h2>
-            <p>You can use <code>&#60h1&#62</code> <code>&#60h2&#62</code> <code>&#60h3&#62</code> <code>&#60h4&#62</code> <code>&#60h5&#62</code> <code>&#60h6&#62</code></p>
+            <p>You can use <code>&#60h1&#62</code> <code>&#60h2&#62</code> <code>&#60h3&#62</code> <code>&#60h4&#62</code> <code>&#60h5&#62</code></p>
             <p class="h1replacement">This is heading</p>
             <h2>This is heading</h2>
             <h3>This is heading</h3>
             <h4>This is heading</h4>
             <h5>This is heading</h5>
-            <h6>This is heading</h6>
         </section>
-        <section>
+        <section id="list">
             <h2>Ordered and unordered list</h2>
             <h3>Ordered list</h3>
             <ol>
@@ -51,7 +53,7 @@
                 <li>Friday</li>
             </ul>
         </section>
-        <section>
+        <section id="table">
             <h2>Table</h2>
             <table>
                 <caption>Table of students</caption>
@@ -68,12 +70,11 @@
                         <th rowspan="2">K</th>
                         <td>Kristýna</td>
                         <td>168cm</td>
-                        <td>4.</td>
+                        <td rowspan="2">4.</td>
                     </tr>
                     <tr>
                         <td>Klára</td>
                         <td>174cm</td>
-                        <td>4.</td>
                     </tr>
                     <tr>
                         <th>B</th>
@@ -91,12 +92,13 @@
                 <tfoot><tr><td colspan="4">This is </td></tr></tfoot>
             </table>
         </section>
-        <section>
+        <section id="button">
             <h2>Button</h2>
-            <a href="#">click for more information</a>
-            <a href="#">click me</a>
+            <a class="button" href="#">click for more information</a>
+            <a class="button button--second" href="#">click me</a>
+            <a class="button button--third" href="#">click me</a>
         </section>
-        <section>
+        <section id="img">
             <h2>Image and gallery</h2>
             <h3>Image</h3>
             <figure>
