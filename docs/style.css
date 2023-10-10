@@ -107,6 +107,7 @@ table > caption {
   border: 2px solid var(--third-color);
   display: inline-block;
   margin: .5em;
+  font-weight: bold;
 }
 
 /*button with different color --> using modificator*/
@@ -118,7 +119,8 @@ table > caption {
 
 
 .button--third {
-
+  background-color: var(--secondary-color);
+  color: var(--third-color);
 }
 
 /*button hover*/
@@ -134,6 +136,13 @@ table > caption {
   border: 2px solid var(--fifth-color);
 }
 
+.button--third:hover {
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+  border-bottom: 2px solid var(--fifth-color);
+  border-right: 2px solid var(--fifth-color);
+  box-shadow: 1px bottom var(--fouth-color);
+}
 
 
 /*Image and gallery*/
@@ -143,9 +152,7 @@ img {
   height: 100%;
 }
 
-figure {
-  
-}
+
 
 /*navigation component --> block nav, element nav__menu and nav__logo, block menu with elements menu__item*/
 .nav {
