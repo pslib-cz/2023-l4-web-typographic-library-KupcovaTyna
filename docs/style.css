@@ -141,7 +141,7 @@ table > caption {
   color: var(--third-color);
   border-bottom: 2px solid var(--fifth-color);
   border-right: 2px solid var(--fifth-color);
-  box-shadow: 1px bottom var(--fouth-color);
+
 }
 
 
