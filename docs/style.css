@@ -10,6 +10,7 @@ html {
     --third-color: #940045;
     --fouth-color: #8d8d8d;
     --fifth-color: #785589;
+    --shadow: #111111a8;
  }
 
  /*Background color*/
@@ -28,11 +29,11 @@ body {
     color: var(--text);
  }
 
- /* If you want to delete dots, uncomment this css
- ul > li {
+ /* If you want to delete dots, use thi modificator*/
+ .ul--without-dots > li {
    list-style: none;
  }
-*/
+
 
 
 
@@ -42,8 +43,29 @@ section{
   padding: 1em;
 }
 
+/*article*/
+article {
+  padding: 1em;
+}
 
- /*Heading*/
+/*paragraph*/
+p {
+  max-width: 48em;
+  padding: .5em 1em;
+  margin: 0 .5em;
+  line-height: 1.5;
+}
+
+
+/*if you want colored text in paragraph use class .text--colored*/
+.text--colored {
+  color: var(--third-color);
+}
+
+
+
+
+/*Headings*/
  h1, h2, h3, h4, h5, h6 {
    color: var(--third-color);
    font-weight: bold;
@@ -63,11 +85,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 h5 {
@@ -78,23 +100,45 @@ h5 {
 
 /*table design*/
 table {
-  border: 1px solid var(--third-color);
   border-collapse: collapse;  
+  margin: 1em;
 }
 
 th, td {
-  border: 1px solid var(--third-color);
+  border: 1px solid var(--text);
   padding: .5em;
 }
 
 table > caption {
-  padding: 1em;
-  color: var(--third-color);
+  padding: .5em;
   font-weight: bold;
   font-size: 1.5em;
 }
 
 
+/*if you want to change color of border to the third color, use this modifikator*/
+.table--colored > caption {
+  color: var(--third-color);
+}
+
+
+.table--colored > thead > tr > th {
+  border-color: var(--third-color);
+  color: var(--third-color);
+}
+
+.table--colored > tbody > tr > td {
+  border-color: var(--third-color);
+}
+
+.table--colored > tbody > tr > th {
+  border-color: var(--third-color);
+  color: var(--third-color);
+}
+
+.table--colored > tfoot > tr > td {
+  border-color: var(--third-color);
+}
 
 
 /*buttons as a component with class .button*/
@@ -121,6 +165,7 @@ table > caption {
 .button--third {
   background-color: var(--secondary-color);
   color: var(--third-color);
+  transition: .5s ease-out;
 }
 
 /*button hover*/
@@ -139,18 +184,64 @@ table > caption {
 .button--third:hover {
   background-color: var(--secondary-color);
   color: var(--third-color);
-  border-bottom: 2px solid var(--fifth-color);
-  border-right: 2px solid var(--fifth-color);
-
+  transform: scale(1.1);
 }
 
 
 /*Image and gallery*/
+/*figure - max with and centering it*/
+figure {
+  max-width: 48em;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*figcapation*/
+figcaption {
+  position: absolute;
+  color: var(--secondary-color);
+  width: 100%;
+  bottom: 0;
+  padding: 1em 0;
+  text-align: center;
+  background-color: var(--shadow);
+}
 
 img {
   width: 100%;
   height: 100%;
+  display: block;
 }
+
+
+/*gallery*/
+/*I you want to use this gallery, please use this notation: 
+    <div class="gallery">
+      <figure class="gallery__item">
+        <img src="./img/cat.jpg" alt="">
+        (<figcaption>This is cute cat</figcaption>) => optional
+      </figure>
+    </div>
+*/
+
+.gallery{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  gap: .5em;
+}
+
+.gallery__item {
+  max-width: 250px;
+  margin: 0;
+}
+
+
+.gallery__item > figcaption{
+  bottom: 0;
+}
+
+
 
 
 
@@ -159,7 +250,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: var(--third-color);
+  background-color: var(--fifth-color);
   color: var(--secondary-color);
   
 }

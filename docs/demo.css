@@ -10,13 +10,15 @@
     margin: 8px;
 }
 
+
+
 .menu__item:hover {
     background-color: var(--secondary-color);
     
     }
     
     .menu__item:hover > a {
-      color: var(--third-color);
+      color: var(--fifth-color);
     }
     
     
@@ -24,7 +26,7 @@
       content: "";
       height: 2px;
       width: 80%;
-      background-color: var(--third-color);
+      background-color: var(--fifth-color);
       position: absolute;
       bottom: .6em;
       left: 10%;

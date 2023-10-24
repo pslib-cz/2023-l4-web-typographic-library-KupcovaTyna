@@ -56,7 +56,7 @@
         <section id="table">
             <h2>Table</h2>
             <table>
-                <caption>Table of students</caption>
+                <caption>This is table without modificator</caption>
                 <thead>
                     <tr>
                         <th>Group</th>
@@ -89,14 +89,74 @@
                         <td>3.</td>
                     </tr>
                 </tbody>
-                <tfoot><tr><td colspan="4">This is </td></tr></tfoot>
+                <tfoot><tr><td colspan="4">This is students that goes to Erasmus</td></tr></tfoot>
+            </table>
+
+            <table class="table--colored">
+                <caption>This is tabel with modificator</caption>
+                <thead>
+                    <tr>
+                        <th>Group</th>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="2">K</th>
+                        <td>Kristýna</td>
+                        <td>168cm</td>
+                        <td rowspan="2">4.</td>
+                    </tr>
+                    <tr>
+                        <td>Klára</td>
+                        <td>174cm</td>
+                    </tr>
+                    <tr>
+                        <th>B</th>
+                        <td>Bára</td>
+                        <td>156cm</td>
+                        <td>2.</td>
+                    </tr>
+                    <tr>
+                        <th>M</th>
+                        <td>Matěj</td>
+                        <td>185cm</td>
+                        <td>3.</td>
+                    </tr>
+                </tbody>
+                <tfoot><tr><td colspan="4">this is students that goes to Erasmus</td></tr></tfoot>
             </table>
         </section>
         <section id="button">
             <h2>Button</h2>
-            <a class="button" href="#">click for more information</a>
-            <a class="button button--second" href="#">click me</a>
-            <a class="button button--third" href="#">click me</a>
+            <article>
+                <h3>Clasic button</h3>
+                <p>This is how button looks like if you use class .butten</p>
+                <a class="button" href="#">click for more information</a>
+            </article>
+            <article>
+                <h3>Button with modificator .butten--second</h3>
+                <p>This is how button looks like if you use class .butten--second</p>
+                <a class="button button--second" href="#">click me</a>
+            </article>
+            <article>
+                <h3>Button with modificator .butten--second</h3>
+                <p>This is how button looks like if you use class .butten--third</p>
+                <a class="button button--third" href="#">click me</a>
+            </article>
+        </section>
+        <section>
+            <h2>Paragraph</h2>
+            <p><b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit. Ad suscipit maiores fugit rem reiciendis sapiente soluta dignissimos veritatis excepturi voluptatibus voluptate necessitatibus repudiandae tenetur reprehenderit, magnam sunt itaque! Quae, vel? Lorem</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam atque culpa reprehenderit? Deleniti, culpa. Numquam hic ea repellat sint eius. Molestiae repudiandae neque pariatur itaque iusto tenetur! Provident, repellat aliquam?</p>
+        </section>
+        <section>
+            <h2>Inline-tags</h2>
+            <p><strong>This is text in tag strong</strong> dolor sit amet consectetur adipisicing elit. <mark>This is text in  tag mark</mark> maiores fugit rem reiciendis <span class="text--colored">This is how text(span) with modificator looks like</span>veritatis excepturi voluptatibus voluptate necessitatibus repudiandae tenetur reprehenderit, magnam sunt itaque! Quae, vel? Lorem</p>
+            <p><i>This is text in tag i.</i> Quisquam atque culpa reprehenderit?</p>
+            
         </section>
         <section id="img">
             <h2>Image and gallery</h2>
@@ -106,18 +166,26 @@
                 <figcaption>This is cute cat</figcaption>
             </figure>
             <h2>Gallery</h2>
-            <div>
-                <figure>
+            <div class="gallery">
+                <figure class="gallery__item">
                     <img src="./img/cat.jpg" alt="">
-                </figure><figure>
-                    <img src="./img/cat.jpg" alt="">
-                </figure><figure>
-                    <img src="./img/cat.jpg" alt="">
-                </figure><figure>
-                    <img src="./img/cat.jpg" alt="">
+                    <figcaption>This is cute cat</figcaption>
                 </figure>
-                <figure>
+                <figure class="gallery__item">
                     <img src="./img/cat.jpg" alt="">
+                    <figcaption>This is cute cat</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img src="./img/cat.jpg" alt="">
+                    <figcaption>This is cute cat</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img src="./img/cat.jpg" alt="">
+                    <figcaption>This is cute cat</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <img src="./img/cat.jpg" alt="">
+                    <figcaption>This is cute cat</figcaption>
                 </figure>
             </div>
         </section>
